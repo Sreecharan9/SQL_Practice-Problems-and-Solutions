@@ -12,3 +12,44 @@ insert into movie values('a1',1),('a2',1),('a3',0),('a4',0),('a5',0),('a6',0),('
 -------------------
 Query:
 -------------------
+
+WITH sort_data AS
+  (SELECT seat
+          ,occupancy
+          ,SUM(occupancy) OVER(ORDER BY row_no) AS running_sum
+          ,row_no
+   FROM
+     (SELECT *
+             ,ROW_NUMBER() OVER() AS row_no
+      FROM movie) AS rank_check),
+     choosing_seats AS
+  (SELECT seat
+          ,occupancy
+          ,running_sum
+          ,COUNT(*) OVER(PARTITION BY occupancy, running_sum
+                        ORDER BY row_no ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS consecutive_seats
+   FROM sort_data
+   ORDER BY row_no)
+SELECT seat AS seat_number
+FROM choosing_seats
+WHERE consecutive_seats >=4
+
+
+
+------------------
+Output
+------------------
+seat_no
+a3
+a4
+a5
+a6
+a9
+a10
+b1
+b2
+b3
+b8
+b9
+b10
+c1
