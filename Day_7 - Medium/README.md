@@ -1,4 +1,4 @@
-# StratScratch || GoogleTesla || Medium || ID 9881
+# StratScratch || Google, Tesla || Medium || ID 9881
 
 Make a report showing the number of survivors and non-survivors by passenger class.
 Classes are categorized based on the pclass value as:
