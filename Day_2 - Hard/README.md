@@ -1,4 +1,4 @@
-# Microsoft SQL Interview Question for Data Engineer Position | Data Analytics
+# Microsoft SQL Interview Question for Data Engineer Position || Ankit Bansal Youtube Channel
 
 A Company wants to hire new employees. The budget of the company for the salaries is $70,000. The company's criteria for hiring are: 
 Keep hiring the senior with the smallest salary until you cannot hire any more seniors.
