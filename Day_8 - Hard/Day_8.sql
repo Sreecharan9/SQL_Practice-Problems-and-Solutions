@@ -43,9 +43,12 @@ GROUP BY 1
 ORDER BY 2 DESC
 )
 
-SELECT client_id
-FROM CTE3
-WHERE FinalCount = (SELECT MAX(FinalCount) FROM CTE3)
+SELECT 
+    client_id
+FROM 
+    CTE3
+WHERE 
+    FinalCount = (SELECT MAX(FinalCount) FROM CTE3)
 
 
 -------------------
