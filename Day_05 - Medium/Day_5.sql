@@ -19,7 +19,7 @@ WHERE "rank" = 1
 Output:
 --------------------
 
-Business_name	                                                    Year	         Inspection_score
+Business_name	                                                    Year	          Inspection_score
 Castro Street Chevron	                                            2015	              100
 MARTIN L. KING MIDDLE SCHOOL	                                    2015	              100
 Taco Bell Cantina #31685	                                        2016	              100
