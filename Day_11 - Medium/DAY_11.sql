@@ -3,7 +3,8 @@ Query
 ------------------
 
 WITH CTE1 as
-(SELECT 
+(
+SELECT 
     entry_date
     ,CAST(entry_date+Interval '7 days' AS DATE) as "7d"
     ,account_id
