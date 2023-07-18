@@ -22,17 +22,24 @@ WITH sort_data AS
      (SELECT *
              ,ROW_NUMBER() OVER() AS row_no
       FROM movie) AS rank_check),
-     choosing_seats AS
-  (SELECT seat
+     
+  choosing_seats AS
+  (
+  SELECT seat
           ,occupancy
           ,running_sum
           ,COUNT(*) OVER(PARTITION BY occupancy, running_sum
                         ORDER BY row_no ASC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS consecutive_seats
    FROM sort_data
-   ORDER BY row_no)
-SELECT seat AS seat_number
-FROM choosing_seats
-WHERE consecutive_seats >=4
+   ORDER BY row_no
+  )
+
+  SELECT 
+    seat AS seat_number
+  FROM 
+    choosing_seats 
+  WHERE 
+    consecutive_seats >=4
 
 
 
