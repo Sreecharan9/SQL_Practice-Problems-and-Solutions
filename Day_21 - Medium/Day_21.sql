@@ -24,12 +24,18 @@ a3 AS
 ),
 a4 AS
 (
-    SELECT store, quarter
+    SELECT 
+        store
+        ,quarter
     FROM stores
 )
-SELECT s1 AS store, q1 AS quarter
-FROM a3
-LEFT JOIN a4 ON a3.q1 = a4.quarter AND a3.s1 = a4.store
+SELECT 
+    s1 AS store
+    ,q1 AS quarter
+FROM 
+    a3
+LEFT JOIN 
+    a4 ON a3.q1 = a4.quarter AND a3.s1 = a4.store
 WHERE store IS NULL;
 
 
