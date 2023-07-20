@@ -1,5 +1,5 @@
 ------------------
-Intitial Query of mine
+Initial Attempt/Query of mine
 ------------------
 WITH a1 AS 
 (
