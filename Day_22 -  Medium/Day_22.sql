@@ -4,7 +4,7 @@ Query
 
 SELECT 
 	customer_id
-    ,STRING_AGG(product_id,',') as products
+	,STRING_AGG(product_id,',') as products
 FROM
 (
 SELECT 
