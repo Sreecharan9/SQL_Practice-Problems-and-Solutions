@@ -4,27 +4,23 @@ Query
 
 WITH retention AS
 (SELECT 
-	cust_id
-    ,to_char(order_date,'MM') as Month_Num
-    ,EXTRACT('month' FROM order_date)-EXTRACT('month' FROM LAG(order_date,1,order_date) OVER(PARTITION BY cust_id ORDER BY order_id)) as earlier_order
+    to_char(order_date,'MM') as Month_Num
+    ,CASE WHEN EXTRACT('month' FROM order_date)-EXTRACT('month' FROM LAG(order_date,1,order_date) OVER(PARTITION BY cust_id ORDER BY order_id)) = 0 THEN NULL ELSE cust_id END as earlier_order_Cust
 FROM transactions
 )
 
 SELECT 
-	TO_CHAR(to_date(Month_Num::Text,'MM'),'Month') AS Month_Name
-    ,SUM(earlier_order) as retention_count
-FROM 
-	retention
-GROUP BY 
-	1,Month_Num
-ORDER BY Month_Num
-
+	month_num
+    ,COUNT(earlier_order_cust)
+ FROM retention
+ GROUP BY 1
 
 -------------------
 Output
 -------------------
 
-| month_name | retention_count |
-|------------|-----------------|
-|  January   |       0         |
-|  February  |       3         |
+| Month | retention_count |
+|-------|-----------------|
+|   01  |       0         |
+|   02  |       3         |
+
