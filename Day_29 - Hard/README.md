@@ -1,6 +1,7 @@
 # Solving A Hard SQL Problem | SQL ON OFF Problem | Magic of SQL -- Ankit Bansal YT Channel
 
 Input Table:
+_____________________________
 
 | event_time | status |
 |------------|--------|
@@ -16,6 +17,8 @@ Input Table:
 
 
 Output Table:
+
+_____________________________
 
 | start_time | end_time | time_diff |
 |------------|----------|-----------|
