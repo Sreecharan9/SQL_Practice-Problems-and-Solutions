@@ -1,8 +1,7 @@
 # Solving A Hard SQL Problem | SQL ON OFF Problem | Magic of SQL -- Ankit Bansal YT Channel
 
 Input Table:
-_____________________________
-
+-------------------
 | event_time | status |
 |------------|--------|
 |   10:01    |   on   |
