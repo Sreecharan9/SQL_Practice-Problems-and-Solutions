@@ -22,3 +22,16 @@ FROM
 WHERE 
     rn<=5
 ORDER BY 2 DESC
+
+------------------
+Result
+------------------
+| state | n_businesses |
+|-------|--------------|
+|   AZ  |     10       |
+|   ON  |      5       |
+|   NV  |      4       |
+|   IL  |      3       |
+|   OH  |      3       |
+|   WI  |      3       |
+
