@@ -4,9 +4,9 @@ Query
 WITH toppings AS
 (
 SELECT 
-  	A.topping_name||', '||B.topping_name||', '||C.topping_name AS Pizza
-    ,(A.ingredient_cost+B.ingredient_cost+C.ingredient_cost) as total
-    ,ROW_NUMBER() OVER(PARTITION BY (A.ingredient_cost+B.ingredient_cost+C.ingredient_cost) ORDER BY A.ingredient_cost+B.ingredient_cost+C.ingredient_cost  DESC, A.topping_name,B.topping_name,C.topping_name) as row_no
+	A.topping_name||', '||B.topping_name||', '||C.topping_name AS Pizza
+	,(A.ingredient_cost+B.ingredient_cost+C.ingredient_cost) as total
+	,ROW_NUMBER() OVER(PARTITION BY (A.ingredient_cost+B.ingredient_cost+C.ingredient_cost) ORDER BY A.ingredient_cost+B.ingredient_cost+C.ingredient_cost  DESC, A.topping_name,B.topping_name,C.topping_name) as row_no
 FROM 
 	pizzas A
 CROSS JOIN 
@@ -21,10 +21,12 @@ ORDER BY
 )
 
 SELECT 
-    pizza
-    ,total
-FROM toppings 
-WHERE row_no = 1
+	pizza
+	,total
+FROM 
+	toppings 
+WHERE 
+	row_no = 1
 LIMIT 5
 
 
