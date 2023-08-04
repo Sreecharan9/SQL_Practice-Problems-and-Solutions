@@ -4,10 +4,10 @@ Query
 WITH toppings AS
 (
 SELECT 
-  	A.topping_name||', '||B.topping_name||', '||C.topping_name AS Pizza
-    ,(A.ingredient_cost+B.ingredient_cost+C.ingredient_cost) as total
+	A.topping_name||', '||B.topping_name||', '||C.topping_name AS Pizza
+	,(A.ingredient_cost+B.ingredient_cost+C.ingredient_cost) as total
 FROM	
-  pizzas A
+	pizzas A
 CROSS JOIN 
 	pizzas B
 CROSS JOIN 
