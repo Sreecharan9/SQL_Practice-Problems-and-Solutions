@@ -27,6 +27,7 @@ WHERE
     isdefault = 'true'
 )
 
+
 SELECT 
     A.*
     ,B.phone_number
