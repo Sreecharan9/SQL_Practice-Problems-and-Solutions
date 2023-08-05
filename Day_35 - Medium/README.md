@@ -1,6 +1,6 @@
 # PayPal Data Engineer SQL Interview Question ( Ankit Bansal YT Channel)
-
-Employee Checkin Details:
+--------------------------------------------------------------------------------------------
+*Employee Checkin Details*:
 
 | employeeid | entry_details |     timestamp_details     |
 |------------|---------------|---------------------------|
@@ -12,8 +12,8 @@ Employee Checkin Details:
 |    1001    |     login     | 2023-06-16 02:00:15.34   |
 |    1001    |     login     | 2023-06-16 03:00:15.34   |
 |    1001    |    logout     | 2023-06-16 12:00:15.34   |
-
-Employee details
+-------------------------------------------------------------------------------------------------
+*Employee details*
 
 | employeeid | phone_number | isdefault |
 |------------|--------------|-----------|
