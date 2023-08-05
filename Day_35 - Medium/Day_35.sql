@@ -21,7 +21,7 @@ phone_default AS
 SELECT 
     employeeid
     ,phone_number
-  	,isdefault
+    ,isdefault
 FROM 
     employee_details
 WHERE 
