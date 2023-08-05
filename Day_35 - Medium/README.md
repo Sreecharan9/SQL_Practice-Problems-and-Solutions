@@ -22,7 +22,7 @@
 |    1001    |     2222     |    TRUE   |
 |    1003    |     3333     |   FALSE   |
 
-
+--------------------------------------------------------------------------------------------------
 Write an SQL query to find output table as below
 
 Employee_id,Employee_default_phone_number,Total_entry, Total_login, Total_logout, Latest_login, Latest_logout
