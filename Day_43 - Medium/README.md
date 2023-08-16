@@ -1,6 +1,6 @@
 # Return the below output as shown in below
 
-Input table
+**Input table**
 ---------------------------------------------------------
 |    name    |
 |------------|
