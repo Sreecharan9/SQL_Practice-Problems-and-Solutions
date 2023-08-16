@@ -1,12 +1,12 @@
 # Return the below output as shown in below
 
 Input table
-
+---------------------------------------------------------
 |    name    |
 |------------|
 | Snowflake  |
-
-Expected Output
+-------------------------------------------------------------
+**Expected Output**
 | name |
 |------|
 |  S   |
