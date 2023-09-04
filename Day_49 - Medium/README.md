@@ -1,0 +1,1 @@
+# You want to find the third-highest salary for each domain in a table. If the third-highest salary is not available for a domain, you want to retrieve the second-highest salary, and if that's not available either, you want to retrieve the highest salary for that domain
