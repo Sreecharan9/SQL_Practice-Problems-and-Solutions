@@ -13,7 +13,7 @@ ORDER By order_id
 SELECT 
 	order_date
 	,COUNT(CASE WHEN sts = 'NC' THEN 1 END) AS New_Customers
-    ,COUNT(CASE WHEN sts = 'OC' THEN 1 END) AS Old_Customers
+        ,COUNT(CASE WHEN sts = 'OC' THEN 1 END) AS Old_Customers
 FROM a1
 GROUP BY 1
 ORDER BY 1
