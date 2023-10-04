@@ -1,6 +1,6 @@
 # Write a query to change seats for the adjacent students & If the number of students is odd, there is no need to change the last one’s seat.
 
-Input Table
+**Input Table*
 
 |  ID  | Student |
 |------|---------|
@@ -11,7 +11,7 @@ Input Table
 |  5   |    J    |
 
 -------------------------------------------------------------------------------------------------------------
- Expected Output
+ **Expected Output*
 
 |  ID  | Student |
 |------|---------|
