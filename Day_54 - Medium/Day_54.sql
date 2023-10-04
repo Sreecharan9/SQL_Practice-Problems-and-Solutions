@@ -5,7 +5,7 @@ Query
 SELECT 
     id
     ,CASE WHEN MOD(id,2)<> 0 THEN LEAD(student,1,student) OVER() 
-          WHEN MOD(id,2) = 0 THEN LAG(student,1,student) OVER() END AS student
+          WHEN MOD(id,2) = 0 THEN LAG(student,1) OVER() END AS student
 FROM 
     seats_table
 
