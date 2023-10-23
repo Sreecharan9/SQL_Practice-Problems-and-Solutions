@@ -3,8 +3,9 @@ Query
 ------------------
 
 1)
-WITH customers AS (
-  SELECT
+WITH customers AS
+(
+SELECT
     order_date
     ,CASE
       WHEN COUNT(customer_id) OVER (PARTITION BY customer_id ORDER BY order_id) > 1 THEN NULL
@@ -14,8 +15,8 @@ WITH customers AS (
       WHEN COUNT(customer_id) OVER (PARTITION BY customer_id ORDER BY order_id) <> 1 THEN 1
       ELSE 0
     END AS repetitive_c
-  FROM customer_orders
-  ORDER BY order_id
+FROM customer_orders
+ORDER BY order_id
 )
 
 SELECT
@@ -40,7 +41,7 @@ ORDER By order_id
 SELECT 
 	order_date
 	,COUNT(*) as new_customers
-  ,oc-COUNT(*) as repeated_customer
+  ,overall_cnt-COUNT(*) as repeated_customers
 FROM a1
 WHERE cnt = 1
 group by 1,overall_cnt
