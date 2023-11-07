@@ -49,14 +49,16 @@
 
 # Output Table
 
-month_name	saleproduct	total_sales
-October  	product1	88808
-October  	product2	43372
-October  	product3	73990
-October  	product4	93600
-November 	product3	88000
-November 	product4	2000
-November 	product1	4620
+| month_name |  saleproduct  | total_sales |
+|------------|---------------|------------|
+| October    |   product1    |   88808    |
+| October    |   product2    |   43372    |
+| October    |   product3    |   73990    |
+| October    |   product4    |   93600    |
+| November   |   product3    |   88000    |
+| November   |   product4    |   2000     |
+| November   |   product1    |   4620     |
+
 
 
 
