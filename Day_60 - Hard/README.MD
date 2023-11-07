@@ -47,7 +47,7 @@
 
 
 
-# Output Table
+# Expected Output
 
 | month_name |  saleproduct  | total_sales |
 |------------|---------------|------------|
