@@ -1,7 +1,7 @@
 # Write a SQL query to find out the monthly sales of each product but the problem is that not for every sale date we have corresponding price date from Product Prices table so then we have to take the price from last known date before sale date. 
 
-# Input Table
-**Product Sales**
+**Input Table**
+# Product Sales
 
 |  saledate  | saleproduct | salequantity |
 |------------|-------------|--------------|
@@ -41,7 +41,8 @@
 | 11/1/2023  | product3  |    200    |
 | 11/3/2023  | product1  |    110    |
 | 11/3/2023  | product2  |    60     |
-| 11/
+| 11/3/2023  | product4  |    80     |
+
 
 
 
