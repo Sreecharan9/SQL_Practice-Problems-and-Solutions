@@ -3,42 +3,46 @@
 ** Input Table **
 # Product Sales
 
-saledate	saleproduct	salequantity
-10/1/2023	product1	150
-10/1/2023	product2	224
-10/3/2023	product1	91
-10/5/2023	product3	317
-10/5/2023	product4	1200
-10/6/2023	product1	11
-10/9/2023	product1	25
-10/9/2023	product2	190
-10/13/2023	product1	601
-10/15/2023	product2	400
-10/15/2023	product3	35
-11/2/2023	product1	290
-11/2/2023	product2	36
-11/3/2023	product3	410
-11/4/2023	product1	42
-11/4/2023	product3	30
-11/4/2023	product4	25
+|  saledate  | saleproduct | salequantity |
+|------------|-------------|--------------|
+| 10/1/2023  |  product1  |    150       |
+| 10/1/2023  |  product2  |    224       |
+| 10/3/2023  |  product1  |    91        |
+| 10/5/2023  |  product3  |    317       |
+| 10/5/2023  |  product4  |   1200       |
+| 10/6/2023  |  product1  |    11        |
+| 10/9/2023  |  product1  |    25        |
+| 10/9/2023  |  product2  |    190       |
+|10/13/2023  |  product1  |    601       |
+|10/15/2023  |  product2  |    400       |
+|10/15/2023  |  product3  |    35        |
+|11/2/2023   |  product1  |    290       |
+|11/2/2023   |  product2  |    36        |
+|11/3/2023   |  product3  |    410       |
+|11/4/2023   |  product1  |    42        |
+|11/4/2023   |  product3  |    30        |
+|11/4/2023   |  product4  |    25        |
+
 
 # Product Prices
 
-pricedate	product	unitprice
-10/1/2023	product1	104
-10/1/2023	product2	53
-10/1/2023	product3	210
-10/1/2023	product4	78
-10/9/2023	product1	100
-10/9/2023	product2	50
-10/9/2023	product3	211
-10/9/2023	product4	75
-10/15/2023	product2	55
-10/15/2023	product3	212
-11/1/2023	product3	200
-11/3/2023	product1	110
-11/3/2023	product2	60
-11/3/2023	product4	80
+|  pricedate  |  product  | unitprice |
+|------------|-----------|-----------|
+| 10/1/2023  | product1  |    104    |
+| 10/1/2023  | product2  |    53     |
+| 10/1/2023  | product3  |    210    |
+| 10/1/2023  | product4  |    78     |
+| 10/9/2023  | product1  |    100    |
+| 10/9/2023  | product2  |    50     |
+| 10/9/2023  | product3  |    211    |
+| 10/9/2023  | product4  |    75     |
+| 10/15/2023 | product2  |    55     |
+| 10/15/2023 | product3  |    212    |
+| 11/1/2023  | product3  |    200    |
+| 11/3/2023  | product1  |    110    |
+| 11/3/2023  | product2  |    60     |
+| 11/
+
 
 
 ** Output Table **
