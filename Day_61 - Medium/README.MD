@@ -12,15 +12,14 @@
 
 **Expected Output**
 
-+-----------------------------+
-|          Matches           |
-+-----------------------------+
+|            Matches            |
+|-----------------------------|
 |     India VS Pakistan     |
 |    India VS Sri Lanka    |
 |    India VS Australia    |
-| Pakistan VS Sri Lanka     |
-| Pakistan VS Australia      |
-+-----------------------------+
+| Pakistan VS Sri Lanka |
+| Pakistan VS Australia |
+
 
 
 
