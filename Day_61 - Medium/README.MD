@@ -1,5 +1,5 @@
 # Write a query to schedule a match between each team
-
+----------------------
 **Input Table**
 
 |   Team    |
@@ -9,7 +9,7 @@
 |  Sri Lanka |
 | Australia  |
 
-
+-------------------
 **Expected Output**
 
 |              Matches             |
