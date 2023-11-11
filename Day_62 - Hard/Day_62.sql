@@ -3,25 +3,25 @@ Query
 -------------------
 
 WITH overs_filter AS (
-  SELECT *,
-    COUNT(CASE WHEN delivery_type = 'legal' THEN ball_no ELSE NULL END) OVER (ORDER BY ball_no) AS balls_count,
-    CEILING((COUNT(CASE WHEN delivery_type = 'legal' THEN ball_no ELSE NULL END) OVER (ORDER BY ball_no) * 1.0 / 6)::FLOAT) AS over_num
+  SELECT *
+    ,COUNT(CASE WHEN delivery_type = 'legal' THEN ball_no ELSE NULL END) OVER (ORDER BY ball_no) AS balls_count
+    ,CEILING((COUNT(CASE WHEN delivery_type = 'legal' THEN ball_no ELSE NULL END) OVER (ORDER BY ball_no) * 1.0 / 6)::FLOAT) AS over_num
   FROM cricket_runs
   ORDER BY ball_no
 ),
 
 wides AS (
-  SELECT *,
-    LAST_VALUE(balls_count) OVER (PARTITION BY over_num ORDER BY ball_no ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS wide_check
+  SELECT *
+    ,LAST_VALUE(balls_count) OVER (PARTITION BY over_num ORDER BY ball_no ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS wide_check
   FROM overs_filter
 )
 
 SELECT
-  CASE
-    WHEN delivery_type = 'wd' AND balls_count = wide_check THEN over_num + 1
-    ELSE over_num
-  END AS over,
-  SUM(
+    CASE
+      WHEN delivery_type = 'wd' AND balls_count = wide_check THEN over_num + 1
+      ELSE over_num
+    END AS over
+  ,SUM(
     CASE
       WHEN delivery_type IN ('nb', 'wd') THEN runs + 1
       ELSE runs
